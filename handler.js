@@ -18,9 +18,11 @@ module.exports.add = (event, context, callback) => {
 };
 
 module.exports.subtract = (event, context, callback) => {
-  var number1 = parseInt(event["queryStringParameters"]["number1"]);
-  var number2 = parseInt(event["queryStringParameters"]["number2"]);
+  let number1 = parseInt(event["queryStringParameters"]["number1"]);
+  let number2 = parseInt(event["queryStringParameters"]["number2"]);
 
+  console.log(event["queryStringParameters"])
+  console.log(`numbers = ${number1} and ${number2}`)
   const response = {
     statusCode: 200,
     body: JSON.stringify({
