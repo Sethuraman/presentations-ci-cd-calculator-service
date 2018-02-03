@@ -19,6 +19,7 @@ module.exports.add = (event, context, callback) => {
 };
 
 module.exports.subtract = (event, context, callback) => {
+  console.log('here ia a log');
   let number1 = parseInt(event["queryStringParameters"]["number1"]);
   let number2 = parseInt(event["queryStringParameters"]["number2"]);
 
