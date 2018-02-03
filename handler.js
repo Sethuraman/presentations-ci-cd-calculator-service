@@ -4,6 +4,7 @@ const Calculator = require('./calculator');
 
 
 module.exports.add = (event, context, callback) => {
+  console.log('here ia a log');
   var number1 = parseInt(event["queryStringParameters"]["number1"]);
   var number2 = parseInt(event["queryStringParameters"]["number2"]);
 
