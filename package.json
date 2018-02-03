@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "test": "mocha specs"
+    "test-unit": "mocha specs/unit-tests",
+    "test-intg": "mocha specs/integration-tests",
+    "integration-tests-launcher": "serverless offline --exec \"CALCULATION_SERVICE_URL=localhost:3000/calc npm run test-intg\""
   },
   "author": "",
   "license": "ISC",
