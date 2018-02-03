@@ -10,6 +10,9 @@ module.exports.add = (event, context, callback) => {
 
   const response = {
     statusCode: 200,
+    headers: {
+      "Access-Control-Allow-Origin" : "*" // Required for CORS support to work
+    },
     body: JSON.stringify({
       result: Calculator.add(number1, number2)
     }),
@@ -27,6 +30,9 @@ module.exports.subtract = (event, context, callback) => {
   console.log(`numbers = ${number1} and ${number2}`)
   const response = {
     statusCode: 200,
+    headers: {
+      "Access-Control-Allow-Origin" : "*" // Required for CORS support to work
+    },
     body: JSON.stringify({
       result: Calculator.subtract(number1, number2)
     }),
@@ -41,6 +47,9 @@ module.exports.multiply = (event, context, callback) => {
 
   const response = {
     statusCode: 200,
+    headers: {
+      "Access-Control-Allow-Origin" : "*" // Required for CORS support to work
+    },
     body: JSON.stringify({
       result: Calculator.multiply(number1, number2)
       }),
