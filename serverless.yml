@@ -16,6 +16,7 @@ service: calc-service
 provider:
   name: aws
   runtime: nodejs6.10
+  region: ap-south-1
 
 functions:
   add:
@@ -25,6 +26,7 @@ functions:
       - http:
           path: calc/add
           method: get
+          cors: true
 
   subtract:
     handler: handler.subtract
@@ -32,7 +34,8 @@ functions:
     events:
       - http:
           path: calc/subtract
-          method: get 
+          method: get
+          cors: true 
 
   multiply:
     handler: handler.multiply
@@ -40,7 +43,8 @@ functions:
     events:
       - http:
           path: calc/multiply
-          method: get                  
+          method: get
+          cors: true                  
 
 plugins:
   - serverless-offline
