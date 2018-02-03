@@ -1,6 +1,6 @@
 'use strict';
 
-const Calculator = require('../calculator');
+const Calculator = require('../../calculator');
 const chai = require('chai')
 const assert = chai.assert;
 
