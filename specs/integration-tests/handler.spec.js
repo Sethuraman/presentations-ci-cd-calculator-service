@@ -38,7 +38,7 @@ describe('Calculator', function() {
 	it('GET /multiply', function(done){
 		chai.request(URL)
 		.get('/multiply')
-		.query({number1: 5, number2: 7})
+		.query({operand1: 5, operand2: 7})
 		.end(function(err, res) {
 			should.not.exist(err);
 			res.should.have.status(200);
