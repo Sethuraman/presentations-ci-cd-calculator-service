@@ -5,8 +5,7 @@
   "scripts": {
     "test-unit": "mocha specs/unit-tests",
     "test-intg": "mocha specs/integration-tests",
-    "integration-tests-launcher": "serverless offline --exec \"CALCULATION_SERVICE_URL=localhost:3000/calc npm run test-intg\"",
-    "prepush": "npm run test-unit && npm run integration-tests-launcher"
+    "integration-tests-launcher": "serverless offline --exec \"CALCULATION_SERVICE_URL=localhost:3000/calc npm run test-intg\""
   },
   "author": "",
   "license": "ISC",
