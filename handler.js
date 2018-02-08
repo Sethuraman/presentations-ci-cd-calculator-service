@@ -42,8 +42,8 @@ module.exports.subtract = (event, context, callback) => {
 };
 
 module.exports.multiply = (event, context, callback) => {
-  var number1 = parseInt(event["queryStringParameters"]["number1"]);
-  var number2 = parseInt(event["queryStringParameters"]["number2"]);
+  var number1 = parseInt(event["queryStringParameters"]["operand1"]);
+  var number2 = parseInt(event["queryStringParameters"]["operand2"]);
 
   const response = {
     statusCode: 200,
